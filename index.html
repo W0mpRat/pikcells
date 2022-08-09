@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- <meta charset="UTF-8"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pikcells Demo</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <onfigr
+     config="0000000" scene="4-piece" version="0.2"
+     image-src="https://d1n07iov3b30py.cloudfront.net/made-renovation/bathroom/"
+     asset-src="./image"
+     style="width: 100%; height: 100%; display: block;"
+     data-filename="liveDataExport"></onfigr>
+	<script src="./configurator.min.js"></script>
+  <script type="text/javascript">
+    const configurator = document.querySelector('onfigr');
+
+    configurator.addEventListener('save-design', e => {
+      const summary = configurator.api.getSummary();
+      console.log(summary);
+    });
+  </script>
+  </body>
+</html>
