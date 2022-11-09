@@ -284,7 +284,7 @@
   color: #7a7667;
 }
 .menu__container .menu__body .filter__container .filter__button {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 4px;
   cursor: pointer;
@@ -335,9 +335,6 @@
   display: flex;
   justify-content: space-between;
   padding: 5px;
-}
-.menu__container .menu__body .menu__bottom-bar .menu__price-details:nth-child(2) {
-  display: none;
 }
 .menu__container .menu__body .menu__bottom-bar .menu__price-details p {
   margin: 0;
