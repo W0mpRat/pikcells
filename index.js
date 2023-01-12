@@ -4,8 +4,6 @@ const port = 3002
 
 app.use('/', express.static('public'))
 
-app.use('/test', express.static('root'))
-
 app.get('/hello', (req, res) => {
   res.send('Hello World!')
 })

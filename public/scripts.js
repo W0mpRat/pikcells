@@ -95,8 +95,9 @@ document.addEventListener('keydown', e => {
     if (index === 7) {
       // configurator.api.setSku(skuApiCalls[index]);
 
-      const showerWall = { zone: 'Shower_Wall_Tiles', sku: 'DECMAKMIG2510M', pattern: 'Stacked Horizontal' };
-      const showerFloor = { zone: 'Shower_Floor_Tiles', sku: 'DECMAKMIG2RMOM', pattern: 'Hexagon' };
+      const showerWall = { zone: 'Shower_Wall_Tiles', sku: 'e06f9071-bf1d-46f0-8ac1-3d71f3e2ce9e', pattern: 'Herringbone' };
+      const showerWall2 = { zone: 'Shower_Wall_Tiles', sku: 'e06f9071-bf1d-46f0-8ac1-3d71f3e2ce9e', pattern: 'Horizontal' };
+      const showerFloor = { zone: 'Shower_Floor_Tiles', sku: 'e06f9071-bf1d-46f0-8ac1-3d71f3e2ce9e', pattern: 'Horizontal' };
       // const wallLights = { sku: 'FLO782856', placement: 'Above' };
       const wallLights = { zone: 'Wall_Lights', sku: 'FLO782856', placement: "Above" }
       // configurator.api.setSku(showerWall);
@@ -104,7 +105,18 @@ document.addEventListener('keydown', e => {
 
       // configurator.api.setSku(wallLights);
 
-      configurator.api.setSku('355e7ff2-a3bd-4aab-b44f-b98f52cc28f3');
+      // const mirror = '355e7ff2-a3bd-4aab-b44f-b98f52cc28f3'
+
+      // const newCam = {
+      //   "theta": 0.810225651880699,
+      //   "phi": 1.5827982974824453,
+      //   "zoom": 0.5
+      // }
+    
+      // configurator.api.setCameraPosition(newCam.theta, newCam.phi, newCam.zoom)
+
+      console.log("8 Pressed, set SKU")
+      configurator.api.setSku(showerWall2);
     }
     if (index === 8) {
       // configurator.api.setSkuList(skuApiCalls[index]);
@@ -122,7 +134,11 @@ document.addEventListener('keydown', e => {
         "Storage"
       ]
 
-      configurator.api.openPanel(panels[9])
+      const layerItems = configurator.api.getLayerViableItems('Vanity_Faucets')
+
+      console.log(layerItems)
+
+      // configurator.api.openPanel(panels[9])
     }
   }
 });
