@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<!-- Style -->
-		<link rel="stylesheet" href="./style.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui,shrink-to-fit=no"
+    />
+    <!-- Style -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./onfigr.css" />
 
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
-			rel="stylesheet"
-		/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no, minimal-ui, shrink-to-fit=no"
-		/>
-	</head>
+  <body>
+    <onfigr
+      config="" 
+      scene="4-piece" 
+      version="1.5" 
+      image-src="https://d1n07iov3b30py.cloudfront.net/made-renovation/bathroom/" 
+      asset-src="./" 
+      room-name="Secondary Bathroom" 
+      design-name="One Time Paradise" 
+      style="width: 100%; height: 100%; display:block" 
+      data-filename="liveDataExport" 
+      enable-ui="true">
+    </onfigr>
+    <!-- Bundle -->
 
-	<body>
-		<onfigr
-			config=""
-			scene="4-piece"
-			version="0.10"
-			image-src="https://d1n07iov3b30py.cloudfront.net/made-renovation/bathroom/"
-			asset-src="./"
-			room-name="loading..."
-			design-name="loading..."
-			style="width: 100%; height: 100%; display:block"
-			data-filename="liveDataExport"
-		>
-		</onfigr>
-		<!-- Bundle -->
+    <script src="./configurator.min.js"></script>
 
-		<script src="./configurator.min.js"></script>
+    <script src="./data/index.js" type="module"></script>
 
-		<script src="./data/index.js" type="module"></script>
-
-		<script src="./scripts.js" type="module"></script>
-	</body>
+    <script src="./scripts.js" type="module"></script>
+  </body>
 </html>

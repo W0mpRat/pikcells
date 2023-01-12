@@ -1,0 +1,62 @@
+/* 
+
+This file consist selector for theÂ Onfigr viewer holder to be adjusted by made developers.
+Below are presented breakpoints used in the app for different devices .
+
+@smartphones: ~'only screen and (max-width: 600px)';
+
+@tablets: ~'only screen and (max-width: 25px)';
+
+@medium-screen: ~'only screen and (max-width: 1200px)';
+
+@tablets-portrait: ~'only screen and ( min-width: 768px ) and (max-width : 1024px) and ( orientation: portrait)';
+ */
+
+@media only screen and (max-width: 600px) {
+	onfigr {
+		position: relative;
+		/* width and height properties need to be prepended with !important rule as the system set them up from the script on initialisation */
+		height: 30vh !important;
+		overflow: hidden;
+	}
+}
+
+/* selectors to override styles for out of stock hotspots*/
+.configurator__hotspot-holder .out-of-stock {
+	cursor: default;
+}
+
+.configurator__hotspot-holder .out-of-stock::after {
+	/* Template image, please feel free to replace with any SVG */
+	content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='iso-8859-1'%3F%3E%3C!-- Uploaded to: SVG Repo  www.svgrepo.com  Generator: SVG Repo Mixer Tools --%3E%3Csvg height='25px' width='25px' version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'  viewBox='0 0 304.223 304.223' xml:space='preserve'%3E%3Cg%3E%3Cg%3E%3Cpath style='fill:%23010002%3B' d='M152.112 0C68.241 0 0.008 68.244 0.008 152.114c0 83.865 68.233 152.109 152.103 152.109c83.865 0 152.103-68.244 152.103-152.109C304.215 68.244 235.982 0 152.112 0z M152.112 275.989c-68.32 0-123.891-55.565-123.891-123.875c0-68.326 55.571-123.891 123.891-123.891s123.891 55.565 123.891 123.891C276.003 220.424 220.432 275.989 152.112 275.989z'/%3E%3Cpath style='fill:%23010002%3B' d='M226.92 138.261H77.308c-7.658 0-13.853 6.206-13.853 13.853c0 7.664 6.201 13.853 13.853 13.853H226.92c7.658 0 13.859-6.19 13.859-13.853C240.779 144.467 234.573 138.261 226.92 138.261z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+	display: block;
+	width: 25px;
+	height: 25px;
+	right: 0;
+	left: 0;
+	border: none;
+	border-radius: none;
+}
+
+.configurator__hotspot-holder .out-of-stock.over::after {
+	width: 25px !important;
+	height: 25px !important;
+	cursor: default;
+}
+
+/* 
+	In this project we are not using default images for the hot spots. The code below was use inside of the style.css to disable them.
+	These are the selectors in case you want to use images instead pseudo elements used now and play around with styling.
+*/
+
+/* .configurator__hotspot-holder img{
+		-webkit-tap-highlight-color: transparent;
+		cursor: pointer;
+		display: none;
+}
+
+.configurator__hotspot-holder img:hover {
+	background-color: #00000045;
+	border-radius: 50px;
+    transform: scale(0.5, 0.5);
+} */

@@ -14,7 +14,18 @@ configurator.addEventListener('nav-back', e => {
 configurator.addEventListener('activate-summary', e => {
   console.log('SUMMARY -- Summary / Continue Button Pressed');
   const summary = configurator.api.getSummary()
+
+  // const camInfo = configurator.api.getCameraPosition()
   console.log(summary);
+  // console.log(camInfo);
+
+  const newCam = {
+    "theta": 0.810225651880699,
+    "phi": 1.5827982974824453,
+    "zoom": 0.5
+  }
+
+  // configurator.api.setCameraPosition(newCam.theta, newCam.phi, newCam.zoom)
 });
 
 configurator.addEventListener('design-team', e => {
@@ -88,10 +99,12 @@ document.addEventListener('keydown', e => {
       const showerFloor = { zone: 'Shower_Floor_Tiles', sku: 'DECMAKMIG2RMOM', pattern: 'Hexagon' };
       // const wallLights = { sku: 'FLO782856', placement: 'Above' };
       const wallLights = { zone: 'Wall_Lights', sku: 'FLO782856', placement: "Above" }
-      configurator.api.setSku(showerWall);
-      configurator.api.setSku(showerFloor);
+      // configurator.api.setSku(showerWall);
+      // configurator.api.setSku(showerFloor);
 
-      configurator.api.setSku(wallLights);
+      // configurator.api.setSku(wallLights);
+
+      configurator.api.setSku('355e7ff2-a3bd-4aab-b44f-b98f52cc28f3');
     }
     if (index === 8) {
       // configurator.api.setSkuList(skuApiCalls[index]);
